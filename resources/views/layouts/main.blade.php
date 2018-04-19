@@ -103,8 +103,8 @@
                           <h5>Solutions</h5>
                           <ul class="list-unstyled mb-3">
                             <li class="nav-item"><a href="{{route('solutions.retail')}}" class="nav-link">Retail</a></li>
-                            <li class="nav-item"><a href="portfolio-no-space-2.html" class="nav-link">Health Care</a></li>
-                            <li class="nav-item"><a href="portfolio-3.html" class="nav-link">Education</a></li>
+                            <li class="nav-item"><a href="{{route('solutions.healthcare')}}" class="nav-link">Health Care</a></li>
+                            <li class="nav-item"><a href="{{route('solutions.education')}}" class="nav-link">Education</a></li>
                             <li class="nav-item"><a href="portfolio-no-space-3.html" class="nav-link">Gas Stations</a></li>
                             <li class="nav-item"><a href="portfolio-4.html" class="nav-link">Industrial</a></li>
                             <li class="nav-item"><a href="portfolio-no-space-4.html" class="nav-link">Smart Buildings</a></li>

@@ -38,11 +38,11 @@ class HomeController extends Controller
 
     public function solutionsHealthcare()
     {
-        return view('solutions.retail');
+        return view('solutions.healthcare');
     }
 
     public function solutionsEducation()
     {
-        return view('solutions.retail');
+        return view('solutions.education');
     }
 }

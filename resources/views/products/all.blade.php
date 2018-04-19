@@ -86,7 +86,7 @@
         <div class="row products products-big">
           <div class="col-lg-4 col-md-6">
             <div class="product">
-              <div class="image"><a href="shop-detail.html"><img src="img/product1.jpg" alt="" class="img-fluid image1"></a></div>
+              <div class="image"><a href="{{route('products.show', [1])}}"><img src="img/product1.jpg" alt="" class="img-fluid image1"></a></div>
               <div class="text">
                 <h3 class="h5"><a href="shop-detail.html">Fur coat with very but very very long name</a></h3>
                 <p class="price">$143.00</p>

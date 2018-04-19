@@ -26,6 +26,11 @@ Route::get('/products', [
     'uses' => 'HomeController@productsAll'
 ]);
 
+Route::get('/products/{id}', [
+    'as' => 'products.show',
+    'uses' => 'ProductsController@show'
+]);
+
 Route::get('/contact', [
     'as' => 'contact',
     'uses' => 'HomeController@contact'
