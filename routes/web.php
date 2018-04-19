@@ -36,7 +36,20 @@ Route::get('/who_we_are', [
     'uses' => 'HomeController@whoWeAre'
 ]);
 
+Route::get('/solutions/retail', [
+    'as' => 'solutions.retail',
+    'uses' => 'HomeController@solutionsRetail'
+]);
 
+Route::get('/solutions/healthcare', [
+    'as' => 'solutions.healthcare',
+    'uses' => 'HomeController@solutionsHealthcare'
+]);
+
+Route::get('/solutions/education', [
+    'as' => 'solutions.education',
+    'uses' => 'HomeController@solutionsEducation'
+]);
 
 
 

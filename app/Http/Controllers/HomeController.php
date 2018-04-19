@@ -30,4 +30,19 @@ class HomeController extends Controller
     {
         return view('about.who_we_are');
     }
+
+    public function solutionsRetail()
+    {
+        return view('solutions.retail');
+    }
+
+    public function solutionsHealthcare()
+    {
+        return view('solutions.retail');
+    }
+
+    public function solutionsEducation()
+    {
+        return view('solutions.retail');
+    }
 }
