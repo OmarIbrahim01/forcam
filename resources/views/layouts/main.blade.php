@@ -68,7 +68,7 @@
       <!-- Navbar Start-->
       <header class="nav-holder make-sticky">
         <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
-          <div class="container"><a href="index.html" class="navbar-brand home"><img src="/img/logo.png" alt="Universal logo" class="d-none d-md-inline-block" width="180"><img src="/img/logo-small.png" alt="Universal logo" class="d-inline-block d-md-none" width="130"><span class="sr-only">Universal - go to homepage</span></a>
+          <div class="container"><a href="/" class="navbar-brand home"><img src="/img/logo.png" alt="Universal logo" class="d-none d-md-inline-block" width="180"><img src="/img/logo-small.png" alt="Universal logo" class="d-inline-block d-md-none" width="130"><span class="sr-only">Universal - go to homepage</span></a>
             <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
             <div id="navigation" class="navbar-collapse collapse">
               <ul class="nav navbar-nav ml-auto">
@@ -82,11 +82,11 @@
                       <div class="row">
                         <div class="col-lg-6"><img src="/img/template-easy-customize.png" alt="" class="img-fluid d-none d-lg-block"></div>
                         <div class="col-lg-3 col-md-6">
-                          <h5><a href="{{route('products_all')}}">All Products</a></h5>
+                          <h5><a href="{{route('products.index')}}">All Products</a></h5>
                           <ul class="list-unstyled mb-3">
-                            <li class="nav-item"><a href="template-accordions.html" class="nav-link">Category 1</a></li>
-                            <li class="nav-item"><a href="template-alerts.html" class="nav-link">Category 2</a></li>
-                            <li class="nav-item"><a href="template-buttons.html" class="nav-link">Category 3</a></li>
+                            @foreach($categories as $category)
+                            <li class="nav-item"><a href="template-accordions.html" class="nav-link">{{$category->name}}</a></li>
+                            @endforeach
                           </ul>
                         </div>
                         
@@ -102,12 +102,9 @@
                         <div class="col-lg-3 col-md-6">
                           <h5>Solutions</h5>
                           <ul class="list-unstyled mb-3">
-                            <li class="nav-item"><a href="{{route('solutions.retail')}}" class="nav-link">Retail</a></li>
-                            <li class="nav-item"><a href="{{route('solutions.healthcare')}}" class="nav-link">Health Care</a></li>
-                            <li class="nav-item"><a href="{{route('solutions.education')}}" class="nav-link">Education</a></li>
-                            <li class="nav-item"><a href="portfolio-no-space-3.html" class="nav-link">Gas Stations</a></li>
-                            <li class="nav-item"><a href="portfolio-4.html" class="nav-link">Industrial</a></li>
-                            <li class="nav-item"><a href="portfolio-no-space-4.html" class="nav-link">Smart Buildings</a></li>
+                            @foreach($solutions as $solution)
+                            <li class="nav-item"><a href="#" class="nav-link">{{$solution->name}}</a></li>
+                            @endforeach
                           </ul>
                         </div>
                       </div>

@@ -4,6 +4,9 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use App\Category;
+use App\Solution;
+use View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,6 +18,11 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+
+
+        $solutions = Solution::all();
+        $categories = Category::all();
+        View::share(['solutions' => $solutions, 'categories' => $categories]);
     }
 
     /**

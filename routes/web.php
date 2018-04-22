@@ -22,8 +22,8 @@ Route::get('/home', [
 ]);
 
 Route::get('/products', [
-    'as' => 'products_all',
-    'uses' => 'HomeController@productsAll'
+    'as' => 'products.index',
+    'uses' => 'ProductsController@index'
 ]);
 
 Route::get('/products/{id}', [
@@ -65,6 +65,6 @@ Route::get('/solutions/education', [
 
 
 
-Route::group(['prefix' => 'sudo'], function () {
+Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
